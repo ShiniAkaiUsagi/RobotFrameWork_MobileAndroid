@@ -77,3 +77,23 @@ Select Checkbox Option
         Wait Until Element Is Visible     ${CHECKBOX_RVCONTAINER}  #Recycler View
         Element Attribute Should Match    ${CheckBox_Option}    checked    true
     END
+
+Go To Short Click Page
+    Open NAV
+    Select Nav Item                       BOTÕES
+    Verify Toolbar Title                  BOTÕES
+    Select Clique Simples Page
+
+Select Clique Simples Page
+    Click Text                            CLIQUE SIMPLES
+    Wait Until Page Contains              CLIQUE SIMPLES
+    
+Go To Long Click Page
+    Open NAV
+    Select Nav Item                       BOTÕES
+    Verify Toolbar Title                  BOTÕES
+    Select Clique Longo Page
+
+Select Clique Longo Page
+    Click Text                            CLIQUE LONGO
+    Wait Until Page Contains              CLIQUE LONGO

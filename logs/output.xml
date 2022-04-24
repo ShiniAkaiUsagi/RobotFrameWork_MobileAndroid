@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220424 12:15:03.288" rpa="false" schemaversion="3">
+<suite id="s1" name="Buttons" source="C:\Users\pedro.dias\Desktop\Cursos\RobotFrameWork_MobileAndroid\TWP\Tests\buttons.robot">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>8</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220424 12:15:03.739" endtime="20220424 12:15:03.739"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/TWP/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220424 12:15:03.740" endtime="20220424 12:15:25.482"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains">
+<arg>COMEÇAR</arg>
+<msg timestamp="20220424 12:15:25.484" level="FAIL">Multiple keywords with name 'Wait Until Page Contains' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Wait Until Page Contains
+    SeleniumLibrary.Wait Until Page Contains</msg>
+<status status="FAIL" starttime="20220424 12:15:25.484" endtime="20220424 12:15:25.484"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="NOT RUN" starttime="20220424 12:15:25.485" endtime="20220424 12:15:25.485"/>
+</kw>
+<status status="FAIL" starttime="20220424 12:15:25.483" endtime="20220424 12:15:25.485"/>
+</kw>
+<status status="FAIL" starttime="20220424 12:15:03.738" endtime="20220424 12:15:25.486"/>
+</kw>
+<test id="s1-t1" name="Deve Realizar um Clique Simples" line="16">
+<tag>short_click</tag>
+<status status="FAIL" starttime="20220424 12:15:25.486" endtime="20220424 12:15:25.487">Parent suite setup failed:
+Multiple keywords with name 'Wait Until Page Contains' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Wait Until Page Contains
+    SeleniumLibrary.Wait Until Page Contains</status>
+</test>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220424 12:15:25.491" endtime="20220424 12:15:26.457"/>
+</kw>
+<status status="PASS" starttime="20220424 12:15:25.491" endtime="20220424 12:15:26.457"/>
+</kw>
+<status status="FAIL" starttime="20220424 12:15:03.291" endtime="20220424 12:15:26.457">Suite setup failed:
+Multiple keywords with name 'Wait Until Page Contains' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Wait Until Page Contains
+    SeleniumLibrary.Wait Until Page Contains</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">short_click</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Buttons">Buttons</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

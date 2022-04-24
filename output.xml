@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220424 11:56:11.185" rpa="false" schemaversion="3">
-<suite id="s1" name="Home" source="c:\Users\pedro.dias\Desktop\Cursos\RobotFrameWork_MobileAndroid\TWP\Tests\home.robot">
-<kw name="Open Session" type="SETUP">
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220424 12:16:30.059" rpa="false" schemaversion="3">
+<suite id="s1" name="Buttons" source="c:\Users\pedro.dias\Desktop\Cursos\RobotFrameWork_MobileAndroid\TWP\Tests\buttons.robot">
+<kw name="Open Session" library="base" type="SETUP">
 <kw name="Set Appium Timeout" library="AppiumLibrary">
 <arg>8</arg>
 <doc>Sets the timeout in seconds used by various keywords.</doc>
-<status status="PASS" starttime="20220424 11:56:11.372" endtime="20220424 11:56:11.373"/>
+<status status="PASS" starttime="20220424 12:16:30.335" endtime="20220424 12:16:30.335"/>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>http://localhost:4723/wd/hub</arg>
@@ -19,40 +19,116 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220424 11:56:11.373" endtime="20220424 11:56:23.247"/>
+<status status="PASS" starttime="20220424 12:16:30.335" endtime="20220424 12:16:43.723"/>
 </kw>
-<status status="PASS" starttime="20220424 11:56:11.372" endtime="20220424 11:56:23.247"/>
-</kw>
-<test id="s1-t1" name="Deve abrir a tela principal" line="10">
+<kw name="Get Started" library="helpers">
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
-<arg>Training Wheels Protocol</arg>
+<arg>COMEÇAR</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20220424 11:56:23.249" endtime="20220424 11:56:27.356"/>
+<status status="PASS" starttime="20220424 12:16:43.724" endtime="20220424 12:16:47.855"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220424 12:16:47.855" endtime="20220424 12:16:48.329"/>
+</kw>
+<status status="PASS" starttime="20220424 12:16:43.723" endtime="20220424 12:16:48.330"/>
+</kw>
+<status status="PASS" starttime="20220424 12:16:30.334" endtime="20220424 12:16:48.330"/>
+</kw>
+<test id="s1-t1" name="Deve Realizar um Clique Longo" line="21">
+<kw name="Go To Long Click Page" library="helpers">
+<kw name="Open NAV" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BUT_NAV}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220424 12:16:48.334" endtime="20220424 12:16:49.492"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BUT_NAV}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220424 12:16:49.494" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220424 12:16:49.493" endtime="20220424 12:16:49.590"/>
+</kw>
+<status status="PASS" starttime="20220424 12:16:48.333" endtime="20220424 12:16:49.590"/>
+</kw>
+<kw name="Select Nav Item" library="helpers">
+<arg>BOTÕES</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${FRAME_NAV_VIEW}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220424 12:16:49.590" endtime="20220424 12:16:50.565"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${Nav_Item}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220424 12:16:50.565" endtime="20220424 12:16:50.675"/>
+</kw>
+<status status="PASS" starttime="20220424 12:16:49.590" endtime="20220424 12:16:50.675"/>
+</kw>
+<kw name="Verify Toolbar Title" library="helpers">
+<arg>BOTÕES</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${TOOLBAR_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220424 12:16:50.676" endtime="20220424 12:16:51.650"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${TOOLBAR_TITLE}</arg>
+<arg>${Title}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20220424 12:16:51.651" level="INFO">Verifying element 'id=io.qaninja.android.twp:id/toolbarTitle' contains exactly text 'BOTÕES'.</msg>
+<status status="PASS" starttime="20220424 12:16:51.650" endtime="20220424 12:16:51.680"/>
+</kw>
+<status status="PASS" starttime="20220424 12:16:50.675" endtime="20220424 12:16:51.680"/>
+</kw>
+<kw name="Select Clique Longo Page" library="helpers">
+<kw name="Click Text" library="AppiumLibrary">
+<arg>CLIQUE LONGO</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220424 12:16:51.681" endtime="20220424 12:16:51.777"/>
 </kw>
 <kw name="Wait Until Page Contains" library="AppiumLibrary">
-<arg>Mobile Version</arg>
+<arg>CLIQUE LONGO</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20220424 11:56:27.357" endtime="20220424 11:56:27.393"/>
+<status status="PASS" starttime="20220424 12:16:51.778" endtime="20220424 12:16:51.947"/>
 </kw>
-<status status="PASS" starttime="20220424 11:56:23.248" endtime="20220424 11:56:27.394"/>
+<status status="PASS" starttime="20220424 12:16:51.680" endtime="20220424 12:16:51.947"/>
+</kw>
+<status status="PASS" starttime="20220424 12:16:48.333" endtime="20220424 12:16:51.947"/>
+</kw>
+<kw name="Long Press" library="AppiumLibrary">
+<arg>${CLIQUE_LONGO}</arg>
+<arg>1000</arg>
+<doc>Long press the element with optional duration</doc>
+<status status="PASS" starttime="20220424 12:16:51.948" endtime="20220424 12:16:55.124"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>CLIQUE LONGO OK</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220424 12:16:55.125" endtime="20220424 12:16:55.153"/>
+</kw>
+<tag>long_press</tag>
+<status status="PASS" starttime="20220424 12:16:48.331" endtime="20220424 12:16:55.153"/>
 </test>
 <kw name="Close Session" library="base" type="TEARDOWN">
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20220424 11:56:27.395" endtime="20220424 11:56:28.089"/>
+<status status="PASS" starttime="20220424 12:16:55.155" endtime="20220424 12:16:55.834"/>
 </kw>
-<status status="PASS" starttime="20220424 11:56:27.395" endtime="20220424 11:56:28.089"/>
+<status status="PASS" starttime="20220424 12:16:55.155" endtime="20220424 12:16:55.835"/>
 </kw>
-<status status="PASS" starttime="20220424 11:56:11.190" endtime="20220424 11:56:28.089"/>
+<status status="PASS" starttime="20220424 12:16:30.067" endtime="20220424 12:16:55.835"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">long_press</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Home">Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Buttons">Buttons</stat>
 </suite>
 </statistics>
 <errors>

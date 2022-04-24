@@ -9,12 +9,14 @@ Suite Teardown         Close Session
 
 ${CHECKBOX_ROBOTFRAMEWORK}            xpath=//android.widget.CheckBox[contains(@text, 'Robot Framework')]
 ${CHECKBOX_PYTHON}                    xpath=//android.widget.CheckBox[contains(@text, 'Python')]
-@{LISTA}                              ${CHECKBOX_ROBOTFRAMEWORK}    ${CHECKBOX_PYTHON}
 
 
 *** Test Cases ***
 
 Deve Selecionar a Opção Python
+    @{Lista}                      Set Variable
+    ...                           ${CHECKBOX_ROBOTFRAMEWORK}
+    ...                           ${CHECKBOX_PYTHON}
     Go to Checkboxes Page
     Select Checkbox Option        @{LISTA}
 
