@@ -10,6 +10,9 @@ ${LOGIN_TEXTFIELD_EMAIL}           id=io.qaninja.android.twp:id/etEmail
 ${LOGIN_TEXTFIELD_SENHA}           id=io.qaninja.android.twp:id/etPassword
 ${LOGIN_BTN_ENTRAR}                id=io.qaninja.android.twp:id/btnSubmit
 ${CHECKBOX_RVCONTAINER}            id=io.qaninja.android.twp:id/rvContainer
+${SIGNUP_SPINNER}                  id=io.qaninja.android.twp:id/spinnerJob
+${SIGNUP_LIST_OPTIONS}             class=android.widget.ListView
+
 
 *** Keywords ***
 
@@ -82,9 +85,6 @@ Go To Short Click Page
     Open NAV
     Select Nav Item                       BOTÕES
     Verify Toolbar Title                  BOTÕES
-    Select Clique Simples Page
-
-Select Clique Simples Page
     Click Text                            CLIQUE SIMPLES
     Wait Until Page Contains              CLIQUE SIMPLES
     
@@ -92,8 +92,25 @@ Go To Long Click Page
     Open NAV
     Select Nav Item                       BOTÕES
     Verify Toolbar Title                  BOTÕES
-    Select Clique Longo Page
-
-Select Clique Longo Page
     Click Text                            CLIQUE LONGO
     Wait Until Page Contains              CLIQUE LONGO
+
+Go To SignUp Page
+    Open NAV
+    Select Nav Item                       FORMS
+    Verify Toolbar Title                  FORMS
+    Click Text                            CADASTRO
+    Wait Until Page Contains              Bem-vindo, crie sua conta.
+
+Choice Job on SignUp Form
+    [Arguments]    ${target}
+    Click Element                    ${SIGNUP_SPINNER}
+    Wait Until Element Is Visible    ${SIGNUP_LIST_OPTIONS}
+    Click Text                       ${target}
+
+Go To Avengers LIST Page
+    Open NAV
+    Select Nav Item                       AVENGERS
+    Verify Toolbar Title                  AVENGERS
+    Click Text                            LISTA
+    Wait Until Page Contains              LISTA
