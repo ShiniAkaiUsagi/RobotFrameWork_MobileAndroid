@@ -1,6 +1,7 @@
 *** Settings ***
 
 Library                AppiumLibrary
+Library                Libs/extend.py
 
 *** Variables ***
 ${BUT_NAV}                         xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]
