@@ -9,6 +9,7 @@ ${TOOLBAR_TITLE}                   id=io.qaninja.android.twp:id/toolbarTitle
 ${LOGIN_TEXTFIELD_EMAIL}           id=io.qaninja.android.twp:id/etEmail
 ${LOGIN_TEXTFIELD_SENHA}           id=io.qaninja.android.twp:id/etPassword
 ${LOGIN_BTN_ENTRAR}                id=io.qaninja.android.twp:id/btnSubmit
+${CHECKBOX_RVCONTAINER}            id=io.qaninja.android.twp:id/rvContainer
 
 *** Keywords ***
 
@@ -64,11 +65,15 @@ Go to Checkboxes Page
 
 Select Radio Button Option
     [Arguments]                       ${RadioBTN_Option}
-    Click Element                     ${RadioBTN_Option}               
+    Click Element                     ${RadioBTN_Option}  
+    Wait Until Element Is Visible     ${RadioBTN_Option}             
     Element Attribute Should Match    ${RadioBTN_Option}    checked    true
 
 Select Checkbox Option
-    [Arguments]                       @{CheckBox_Option}
-
-    Click Element                     @{CheckBox_Option}
-    Element Attribute Should Match    @{CheckBox_Option}    checked    true
+    [Arguments]                           @{CheckBox_Option}
+    FOR     ${CheckBox_Option}     IN     @{CheckBox_Option}
+        Click Element                     ${CheckBox_Option}
+        # Wait Until Element Is Visible     ${CheckBox_Option}
+        Wait Until Element Is Visible     ${CHECKBOX_RVCONTAINER}  #Recycler View
+        Element Attribute Should Match    ${CheckBox_Option}    checked    true
+    END

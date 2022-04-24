@@ -12,4 +12,4 @@ udid			<udid do mobile>
 # TWP = Training Wheel Protocol
 
 # CMD > 
-robot -d ./Reports Tests
+robot -d ./Logs Tests
