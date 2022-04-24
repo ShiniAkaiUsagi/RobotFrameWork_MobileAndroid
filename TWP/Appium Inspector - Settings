@@ -4,12 +4,12 @@ APPIUM Inspector:
 automationName	UiAutomator2
 platformName	Android
 deviceName		Emulator
-app				PATH do twp.apk
-udid			udid do mobile
---- (emulator-5554)
---- comando: adb devices 			
+app				<PATH do twp.apk>
+udid			<udid do mobile>
+### (emulator-5554)
+### comando: adb devices 			
 
-TWP = Training Wheel Protocol
+# TWP = Training Wheel Protocol
 
 # CMD > 
 robot -d ./Reports Tests
