@@ -17,6 +17,7 @@ Deve Realizar um Clique Simples
     Go To Short Click Page
     Click Element                    ${CLIQUE_SIMPLES}
     Wait Until Page Contains         Isso é um clique simples
+    Sleep    3  #temporary - performance issues for the next test
 
 Deve Realizar um Clique Longo
     [Tags]    long_press

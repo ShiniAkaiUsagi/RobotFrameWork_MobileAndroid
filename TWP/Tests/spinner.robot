@@ -13,6 +13,7 @@ Suite Teardown         Close Session
 Deve selecionar o Perfil QA no Formulário de CADASTRO
     Go To SignUp Page
     Choice Job on SignUp Form         QA
+    Sleep    3  #temporary - performance issues for the next test
 
 Deve selecionar o Perfil DevOps no Formulário de CADASTRO
     Go To SignUp Page
