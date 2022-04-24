@@ -47,7 +47,7 @@ Select Radio Button page
     Click Text                       BOTÕES DE RADIO
     Wait Until Page Contains         Escolha sua linguagem preferida
 
-Select Checkbox option
+Select Checkbox page
     Click Text                       CHECKBOX
     Wait Until Page Contains         Marque as techs que usam Appium
 
@@ -61,7 +61,7 @@ Go to Checkboxes Page
     Open NAV
     Select Nav Item                  INPUTS
     Verify Toolbar Title             INPUTS
-    Select Checkbox option
+    Select Checkbox page
 
 Select Radio Button Option
     [Arguments]                       ${RadioBTN_Option}

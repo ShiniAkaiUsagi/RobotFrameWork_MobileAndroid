@@ -8,7 +8,7 @@ Suite Teardown         Close Session
 *** Variables ***
 
 ${CHECKBOX_ROBOTFRAMEWORK}            xpath=//android.widget.CheckBox[contains(@text, 'Robot Framework')]
-${CHECKBOX_PYTHON}            xpath=//android.widget.CheckBox[contains(@text, 'Python')]
+${CHECKBOX_PYTHON}                    xpath=//android.widget.CheckBox[contains(@text, 'Python')]
 @{LISTA}                              ${CHECKBOX_ROBOTFRAMEWORK}    ${CHECKBOX_PYTHON}
 
 

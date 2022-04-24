@@ -12,7 +12,7 @@ Open Session
     ...                         automationName=UiAutomator2
     ...                         platformName=Android
     ...                         deviceName=Emulator
-    ...                         app=${EXECDIR}/app/twp.apk
+    ...                         app=${EXECDIR}/TWP/app/twp.apk
     Get Started
 
 Close Session
