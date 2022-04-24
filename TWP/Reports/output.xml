@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.3 on win32)" generated="20220422 10:51:10.579" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Users\pedro.dias\Desktop\Cursos\QANinja_MobileAndroid\TWP\Tests">
+<suite id="s1-s1" name="Home" source="C:\Users\pedro.dias\Desktop\Cursos\QANinja_MobileAndroid\TWP\Tests\home.robot">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220422 10:51:10.776" endtime="20220422 10:51:10.776"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220422 10:51:10.776" endtime="20220422 10:51:22.950"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220422 10:51:22.950" endtime="20220422 10:51:27.066"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220422 10:51:27.066" endtime="20220422 10:51:27.527"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:22.950" endtime="20220422 10:51:27.527"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:10.775" endtime="20220422 10:51:27.527"/>
+</kw>
+<test id="s1-s1-t1" name="Deve abrir a tela principal" line="10">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Training Wheels Protocol</arg>
+<arg>5</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220422 10:51:27.529" endtime="20220422 10:51:27.620"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Mobile Version</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<msg timestamp="20220422 10:51:32.807" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="1794"&gt;
+  &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" resource-id="io.qaninja.android.twp:id/action_bar_root" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+            &lt;androidx.drawerlayout.widget.DrawerLayout index="0" package="io.qaninja.android.twp" class="androidx.drawerlayout.widget.DrawerLayout" text="" resource-id="io.qaninja.android.twp:id/drawerLayout" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,1794]" displayed="true"&gt;
+              &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,1794]" displayed="true"&gt;
+                &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,210]" displayed="true"&gt;
+                  &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" resource-id="io.qaninja.android.twp:id/toolbar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][1080,210]" displayed="true"&gt;
+                    &lt;android.widget.ImageButton index="0" package="io.qaninja.android.twp" class="android.widget.ImageButton" text="" content-desc="Open navigation drawer" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,63][147,210]" displayed="true" /&gt;
+                    &lt;android.view.ViewGroup index="1" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[189,63][1080,210]" displayed="true"&gt;
+                      &lt;android.widget.TextView index="0" package="io.qaninja.android.twp" class="android.widget.TextView" text="AVENGERS" resource-id="io.qaninja.android.twp:id/toolbarTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[189,115][888,158]" displayed="true" /&gt;
+                      &lt;android.widget.Button index="1" package="io.qaninja.android.twp" class="android.widget.Button" text="QA NINJA" resource-id="io.qaninja.android.twp:id/btnBuyNowToolbar" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[888,96][1059,177]" displayed="true" /&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.view.ViewGroup&gt;
+                &lt;/android.widget.LinearLayout&gt;
+                &lt;android.view.ViewGroup index="1" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
+                  &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" resource-id="io.qaninja.android.twp:id/main_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
+                    &lt;android.view.ViewGroup index="0" package="io.qaninja.android.twp" class="android.view.ViewGroup" text="" resource-id="io.qaninja.android.twp:id/swipeRefresh" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
+                      &lt;androidx.recyclerview.widget.RecyclerView index="0" package="io.qaninja.android.twp" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="io.qaninja.android.twp:id/rvSubMenu" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,210][1080,1794]" displayed="true"&gt;
+                        &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[21,231][1059,838]" displayed="true"&gt;
+                          &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,241][1052,828]" displayed="true"&gt;
+                            &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,241][1052,687]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[461,384][619,544]" displayed="true" /&gt;
+                            &lt;/android.widget.FrameLayout&gt;
+                            &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="LISTA" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,687][1052,828]" displayed="true" /&gt;
+                          &lt;/android.widget.LinearLayout&gt;
+                        &lt;/android.widget.FrameLayout&gt;
+                        &lt;android.widget.FrameLayout index="1" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[21,859][1059,1466]" displayed="true"&gt;
+                          &lt;android.widget.LinearLayout index="0" package="io.qaninja.android.twp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,869][1052,1456]" displayed="true"&gt;
+                            &lt;android.widget.FrameLayout index="0" package="io.qaninja.android.twp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,869][1052,1315]" displayed="true"&gt;
+                              &lt;android.widget.ImageView index="0" package="io.qaninja.android.twp" class="android.widget.ImageView" text="" content-desc="Icon" resource-id="io.qaninja.android.twp:id/ivItemIcon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[474,1035][605,1148]" displayed="true" /&gt;
+                            &lt;/android.widget.FrameLayout&gt;
+                            &lt;android.widget.TextView index="1" package="io.qaninja.android.twp" class="android.widget.TextView" text="BUSCA" resource-id="io.qaninja.android.twp:id/tvItemTitle" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,1315][1052,1456]" displayed="true" /&gt;
+                          &lt;/android.widget.LinearLayout&gt;
+                        &lt;/android.widget.FrameLayout&gt;
+                      &lt;/androidx.recyclerview.widget.RecyclerView&gt;
+                    &lt;/android.view.ViewGroup&gt;
+                  &lt;/android.widget.FrameLayout&gt;
+                &lt;/android.view.ViewGroup&gt;
+              &lt;/android.view.ViewGroup&gt;
+            &lt;/androidx.drawerlayout.widget.DrawerLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+    &lt;android.view.View index="1" package="io.qaninja.android.twp" class="android.view.View" text="" resource-id="android:id/statusBarBackground" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,63]" displayed="true" /&gt;
+    &lt;android.view.View index="2" package="io.qaninja.android.twp" class="android.view.View" text="" resource-id="android:id/navigationBarBackground" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1794][1080,1920]" displayed="true" /&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220422 10:51:33.052" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220422 10:51:32.807" endtime="20220422 10:51:33.052"/>
+</kw>
+<msg timestamp="20220422 10:51:33.052" level="FAIL">Text 'Mobile Version' did not appear in 5 seconds</msg>
+<status status="FAIL" starttime="20220422 10:51:27.621" endtime="20220422 10:51:33.053"/>
+</kw>
+<status status="FAIL" starttime="20220422 10:51:27.528" endtime="20220422 10:51:33.054">Text 'Mobile Version' did not appear in 5 seconds</status>
+</test>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220422 10:51:33.055" endtime="20220422 10:51:33.972"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:33.055" endtime="20220422 10:51:33.973"/>
+</kw>
+<status status="FAIL" starttime="20220422 10:51:10.602" endtime="20220422 10:51:33.973"/>
+</suite>
+<suite id="s1-s2" name="Login" source="C:\Users\pedro.dias\Desktop\Cursos\QANinja_MobileAndroid\TWP\Tests\login.robot">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220422 10:51:33.989" endtime="20220422 10:51:33.990"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220422 10:51:33.990" endtime="20220422 10:51:45.826"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220422 10:51:45.827" endtime="20220422 10:51:50.179"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>COMEÇAR</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220422 10:51:50.179" endtime="20220422 10:51:50.697"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:45.827" endtime="20220422 10:51:50.697"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:33.989" endtime="20220422 10:51:50.698"/>
+</kw>
+<test id="s1-s2-t1" name="Deve logar com sucesso" line="11">
+<kw name="Open NAV" library="helpers">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BUT_NAV}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20220422 10:51:50.701" endtime="20220422 10:51:51.821"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BUT_NAV}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220422 10:51:51.823" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<status status="PASS" starttime="20220422 10:51:51.822" endtime="20220422 10:51:52.886"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:50.701" endtime="20220422 10:51:52.886"/>
+</kw>
+<kw name="Open Page Item" library="login">
+<arg>FORMS</arg>
+<arg>FORMS</arg>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${Page_Item}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220422 10:51:52.887" endtime="20220422 10:51:53.024"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${Result}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220422 10:51:53.025" endtime="20220422 10:51:53.522"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:52.886" endtime="20220422 10:51:53.522"/>
+</kw>
+<kw name="Open Page Item" library="login">
+<arg>LOGIN</arg>
+<arg>Fala QA, vamos testar o login?</arg>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${Page_Item}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" starttime="20220422 10:51:53.523" endtime="20220422 10:51:54.049"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${Result}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220422 10:51:54.050" endtime="20220422 10:51:54.876"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:53.523" endtime="20220422 10:51:54.876"/>
+</kw>
+<kw name="APP Login" library="login">
+<arg>eu@papito.io</arg>
+<arg>qaninja</arg>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${LOGIN_TEXTFIELD_EMAIL}</arg>
+<arg>${Email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220422 10:51:54.878" level="INFO">Typing text 'eu@papito.io' into text field 'id=io.qaninja.android.twp:id/etEmail'</msg>
+<status status="PASS" starttime="20220422 10:51:54.877" endtime="20220422 10:51:55.453"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${LOGIN_TEXTFIELD_SENHA}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220422 10:51:55.455" level="INFO">Typing text 'qaninja' into text field 'id=io.qaninja.android.twp:id/etPassword'</msg>
+<status status="PASS" starttime="20220422 10:51:55.453" endtime="20220422 10:51:56.590"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LOGIN_BTN_ENTRAR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220422 10:51:56.592" level="INFO">Clicking element 'id=io.qaninja.android.twp:id/btnSubmit'.</msg>
+<status status="PASS" starttime="20220422 10:51:56.591" endtime="20220422 10:51:57.162"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Show! Suas credenciais são validas.</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20220422 10:51:57.162" endtime="20220422 10:51:57.352"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:54.877" endtime="20220422 10:51:57.352"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:50.698" endtime="20220422 10:51:57.354"/>
+</test>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220422 10:51:57.355" endtime="20220422 10:51:58.629"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:57.355" endtime="20220422 10:51:58.629"/>
+</kw>
+<status status="PASS" starttime="20220422 10:51:33.974" endtime="20220422 10:51:58.629"/>
+</suite>
+<suite id="s1-s3" name="Nav" source="C:\Users\pedro.dias\Desktop\Cursos\QANinja_MobileAndroid\TWP\Tests\nav.robot">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20220422 10:51:58.648" endtime="20220422 10:51:58.649"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>app=${EXECDIR}/app/twp.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220422 10:52:08.184" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220422 10:52:08.182" endtime="20220422 10:52:08.233"/>
+</kw>
+<msg timestamp="20220422 10:52:08.234" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220422 10:52:08.236" level="FAIL">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</msg>
+<status status="FAIL" starttime="20220422 10:51:58.649" endtime="20220422 10:52:08.237"/>
+</kw>
+<kw name="Get Started" library="helpers">
+<status status="NOT RUN" starttime="20220422 10:52:08.238" endtime="20220422 10:52:08.238"/>
+</kw>
+<status status="FAIL" starttime="20220422 10:51:58.648" endtime="20220422 10:52:08.238"/>
+</kw>
+<test id="s1-s3-t1" name="Deve acessar a tela Dialogs" line="10">
+<status status="FAIL" starttime="20220422 10:52:08.238" endtime="20220422 10:52:08.239">Parent suite setup failed:
+ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+</test>
+<test id="s1-s3-t2" name="Deve acessar a tela Formulários" line="15">
+<status status="FAIL" starttime="20220422 10:52:08.241" endtime="20220422 10:52:08.242">Parent suite setup failed:
+ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+</test>
+<test id="s1-s3-t3" name="Deve acessar a tela Vingadores" line="20">
+<status status="FAIL" starttime="20220422 10:52:08.244" endtime="20220422 10:52:08.245">Parent suite setup failed:
+ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+</test>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220422 10:52:08.250" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220422 10:52:08.249" endtime="20220422 10:52:08.251"/>
+</kw>
+<msg timestamp="20220422 10:52:08.253" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220422 10:52:08.255" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20220422 10:52:08.248" endtime="20220422 10:52:08.257"/>
+</kw>
+<status status="FAIL" starttime="20220422 10:52:08.248" endtime="20220422 10:52:08.258">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20220422 10:51:58.631" endtime="20220422 10:52:08.258">Suite setup failed:
+ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+Also suite teardown failed:
+No application is open</status>
+</suite>
+<status status="FAIL" starttime="20220422 10:51:10.580" endtime="20220422 10:52:08.262"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="4" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Home">Tests.Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Login">Tests.Login</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s3" name="Nav">Tests.Nav</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220422 10:52:08.234" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20220422 10:52:08.253" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
